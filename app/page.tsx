@@ -1,20 +1,21 @@
 export default function Page() {
-  const whatsapp = "https://wa.me/5541999784293?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Decastro%20Engenharia%20e%20quero%20mais%20informa%C3%A7%C3%B5es"
+  const whatsapp =
+    "https://wa.me/5541999784293?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Decastro%20Engenharia%20e%20quero%20mais%20informa%C3%A7%C3%B5es"
 
   return (
-    <main style={{ fontFamily: "Arial", margin: 0 }}>
+    <div style={{ fontFamily: "Arial", margin: 0 }}>
 
       {/* HEADER */}
       <header style={{
         display: "flex",
         justifyContent: "space-between",
-        padding: "20px",
+        padding: "20px 40px",
         borderBottom: "1px solid #eee",
         alignItems: "center"
       }}>
-        <div style={{ fontWeight: "bold", fontSize: 20 }}>
-          🔶 Decastro Engenharia
-        </div>
+        <h2 style={{ color: "#2b3a4a" }}>
+          D Decastro Engenharia
+        </h2>
 
         <nav style={{ display: "flex", gap: 20 }}>
           <a href="#servicos">Serviços</a>
@@ -29,16 +30,16 @@ export default function Page() {
 
       {/* HERO */}
       <section style={{
-        padding: "80px 20px",
         background: "#2b3a4a",
-        color: "white"
+        color: "white",
+        padding: "100px 40px"
       }}>
-        <h1 style={{ fontSize: 42 }}>
+        <h1 style={{ fontSize: 48 }}>
           Engenharia e Soluções Técnicas
         </h1>
 
-        <p style={{ maxWidth: 600 }}>
-          Projetos, treinamentos e soluções em engenharia para empresas e indústrias.
+        <p style={{ maxWidth: 600, fontSize: 18 }}>
+          Projetos técnicos, treinamentos e soluções completas para empresas e indústrias.
         </p>
 
         <a
@@ -51,7 +52,8 @@ export default function Page() {
             background: "#f59e0b",
             color: "black",
             fontWeight: "bold",
-            borderRadius: 8
+            borderRadius: 8,
+            textDecoration: "none"
           }}
         >
           Falar no WhatsApp
@@ -59,43 +61,43 @@ export default function Page() {
       </section>
 
       {/* SERVIÇOS */}
-      <section id="servicos" style={{ padding: 40 }}>
+      <section id="servicos" style={{ padding: 60 }}>
         <h2>Serviços</h2>
 
-        <ul>
+        <ul style={{ lineHeight: 2 }}>
           <li>🎓 Treinamentos NR</li>
           <li>🧯 Bombeiro Civil</li>
           <li>📐 Projetos Técnicos</li>
           <li>🔩 Ponto de Ancoragem</li>
           <li>🦺 Linha de Vida</li>
-          <li>🏢 Consultoria</li>
+          <li>🏢 Consultoria em Engenharia</li>
         </ul>
       </section>
 
       {/* PROJETOS */}
-      <section id="projetos" style={{ padding: 40, background: "#f5f5f5" }}>
+      <section id="projetos" style={{ padding: 60, background: "#f5f5f5" }}>
         <h2>Projetos realizados</h2>
 
-        <div style={{ display: "grid", gap: 20 }}>
+        <div style={{ display: "grid", gap: 20, marginTop: 20 }}>
           <div>
             <h3>Projeto Industrial</h3>
-            <p>Estruturação e adequação técnica em ambiente industrial.</p>
+            <p>Adequação técnica completa em ambiente industrial.</p>
           </div>
 
           <div>
-            <h3>Linha de Vida</h3>
-            <p>Instalação de sistemas para trabalho em altura.</p>
+            <h3>Linhas de Vida</h3>
+            <p>Instalação de sistemas de segurança para trabalho em altura.</p>
           </div>
 
           <div>
             <h3>Projeto Corporativo</h3>
-            <p>Consultoria e adequação para empresas.</p>
+            <p>Soluções técnicas para ambientes empresariais.</p>
           </div>
         </div>
       </section>
 
       {/* CONTATO */}
-      <section id="contato" style={{ padding: 40 }}>
+      <section id="contato" style={{ padding: 60 }}>
         <h2>Contato</h2>
 
         <p>Curitiba - PR</p>
@@ -113,7 +115,9 @@ export default function Page() {
         textAlign: "center"
       }}>
         <button
-          onClick={() => alert("Política de privacidade: usamos apenas dados para contato.")}
+          onClick={() =>
+            alert("Política de privacidade: seus dados são usados apenas para contato.")
+          }
         >
           Política de Privacidade
         </button>
@@ -123,6 +127,6 @@ export default function Page() {
         </p>
       </footer>
 
-    </main>
+    </div>
   )
 }
